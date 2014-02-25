@@ -1,0 +1,11 @@
+/*.table{
+	border: 2px solid black;
+}*/
+.container .table ul li{
+	display: inline-block;
+	text-decoration: none;
+	margin-right: 30px;
+}
+.col-md-4 {
+	margin:200px 0 0 0;
+}

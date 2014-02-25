@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>jQuery - intermediate1</title>
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <!-- Less -->
+    <link rel="stylesheet" href="jqueryday2.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $("form").submit(function(){
+          return false;
+        });
+
+        $("button").click(function(){
+          $("form").submit();
+          $("thead").append("<tr><td>"+$("#firstname").val()+"</td><td>"+$("#lastname").val()+"</td><td>"+$("#email").val()+"</td><td>"+$("#contact").val()+"</td></tr>");
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th>Contact #</th>
+        </thead>
+      </table>
+      <div class="col-md-4">
+        <form role="form">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+          </div>
+          <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" class="form-control" id="email" placeholder="email">
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact No.</label>
+            <input type="text" class="form-control" id="contact" placeholder="Phone #">
+          </div>
+        </form>
+        <button class="btn btn-default">Add User</button>
+      </div>
+    </div>
+  </body>
+</html>
